@@ -183,93 +183,11 @@
     .custom-shadow {
       box-shadow: 0 10px 60px -15px rgba(249, 115, 22, 0.3);
     }
-
-    /* Mobile optimizations */
-    @media (max-width: 640px) {
-      .product-card {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      }
-      
-      .product-image-container {
-        height: 180px;
-      }
-      
-      .hero-content {
-        padding-top: 3rem;
-        padding-bottom: 2rem;
-      }
-      
-      .hero-title {
-        font-size: 1.75rem;
-      }
-      
-      .hero-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-      
-      .modal-content {
-        width: 95%;
-        margin: 0 auto;
-      }
-      
-      .modal-body {
-        flex-direction: column;
-      }
-      
-      .modal-image-container {
-        height: 250px;
-      }
-      
-      .modal-product-info {
-        padding: 1.5rem;
-      }
-      
-      .category-scroll {
-        justify-content: flex-start;
-      }
-      
-      .feature-card {
-        padding: 1.5rem;
-      }
-    }
     
     @media (max-width: 768px) {
       .hero-content {
         padding-top: 4rem;
       }
-      
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .modal-body {
-        max-height: 80vh;
-      }
-      
-      .modal-image-container {
-        height: 500px;
-      }
-    }
-    
-    /* Accessibility improvements */
-    :focus-visible {
-      outline: 2px solid #f97316;
-      outline-offset: 2px;
-    }
-    
-    /* Performance optimizations */
-    .will-change-transform {
-      will-change: transform;
-    }
-    
-    /* Touch target sizes */
-    button, a {
-      min-height: 44px;
-      min-width: 44px;
     }
   </style>
 </head>
@@ -313,30 +231,34 @@
               </svg>
             </div>
             <div>
-              <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-600 tracking-tight hero-title">
+              <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-600 tracking-tight">
                 Confira nosso Catálogo
               </h1>
               <p class="text-sm text-gray-400 mt-1">Comunicação Visual Inteligente para TODO o Brasil.</p>
               <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">
-                Desenvolvido por 
-                <a href="https://droplexstudios.shop" target="_blank" class="text-primary-500 hover:underline">
-                  <strong>Droplex Studios</strong>
-                </a>
-              </p>
+  Desenvolvido por 
+  <a href="https://droplexstudios.shop" target="_blank" class="text-primary-500 hover:underline">
+    <strong>Droplex Studios</strong>
+  </a>
+</p>
             </div>
           </div>
           
-          <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start hero-buttons">
-            <a href="#products" class="px-6 py-3 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center">
+          <p class="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8">
+            
+          </p>
+          
+          <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+            <a href="#products" class="px-6 py-3 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center">
               <i class="fas fa-box-open mr-2"></i> Ver Produtos
             </a>
-            <a href="https://wa.me/5511953154358?" target="_blank" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center">
+            <a href="https://wa.me/5511953154358?" target="_blank" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center">
               <i class="fas fa-phone-alt mr-2"></i> Fale Conosco
             </a>
           </div>
         </div>
         
-        <!-- Hero image - Hidden on mobile -->
+        <!-- Hero image -->
         <div class="flex-1 hidden lg:flex justify-center animate-fade-in">
           <div class="relative w-full max-w-md">
             <div class="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-10 filter blur-xl"></div>
@@ -344,8 +266,7 @@
             <div class="relative bg-gray-800 bg-opacity-50 rounded-2xl p-2 backdrop-filter backdrop-blur-sm border border-gray-700">
               <img src="https://static.wixstatic.com/media/cc9c81_a52ec991e515410bb45957ecbd80f8f7~mv2.jpg/v1/fill/w_701,h_526,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cc9c81_a52ec991e515410bb45957ecbd80f8f7~mv2.jpg" 
                    alt="Exemplo de produto LTM" 
-                   class="w-full h-auto rounded-xl shadow-xl"
-                   loading="lazy">
+                   class="w-full h-auto rounded-xl shadow-xl">
             </div>
           </div>
         </div>
@@ -359,7 +280,7 @@
     <div class="sticky top-0 z-30 bg-dark-900/95 backdrop-filter backdrop-blur-sm border-b border-gray-800 py-4 px-4">
       <div class="container mx-auto">
         <div class="w-full overflow-x-auto pb-2 scroll-container">
-          <div id="categoryButtons" class="flex flex-nowrap md:flex-wrap gap-3 justify-start md:justify-center px-2 category-scroll">
+          <div id="categoryButtons" class="flex flex-nowrap md:flex-wrap gap-3 justify-center px-2">
             <button onclick="filterByCategory('all')" class="category-btn active px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
               <i class="fas fa-th mr-2"></i> Todos
             </button>
@@ -400,35 +321,33 @@
 
       <div class="container mx-auto px-4">
         <!-- Search bar -->
-        <div class="mb-8 sm:mb-12 max-w-3xl mx-auto animate-fade-in">
+        <div class="mb-12 max-w-3xl mx-auto animate-fade-in">
           <div class="relative">
             <input type="text" id="searchInput" 
                    placeholder="Digite o nome, categoria ou descrição e encontre o que precisa"
-                   class="w-full px-5 py-3 pr-12 rounded-xl bg-dark-700 border border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 outline-none transition-all duration-300 pl-12 placeholder-gray-500 text-white shadow-lg"
-                   aria-label="Buscar produtos">
+                   class="w-full px-5 py-3 pr-12 rounded-xl bg-dark-700 border border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 outline-none transition-all duration-300 pl-12 placeholder-gray-500 text-white shadow-lg">
             <div class="absolute left-4 top-3.5 text-gray-500 text-lg">
               <i class="fas fa-search"></i>
             </div>
             <button onclick="clearSearch()" id="clearSearchBtn" 
-                    class="absolute right-4 top-3.5 text-gray-500 hover:text-primary-500 transition-colors hidden"
-                    aria-label="Limpar busca">
+                    class="absolute right-4 top-3.5 text-gray-500 hover:text-primary-500 transition-colors hidden">
               <i class="fas fa-times"></i>
             </button>
           </div>
         </div>
 
         <!-- Featured Products -->
-        <div class="mb-6 sm:mb-8 text-center">
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 inline-block">
+        <div class="mb-8 text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 inline-block">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-red-500">
               Veja nossos Melhores Produtos
             </span>
           </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">Descubra nossos melhores produtos</p>
+          <p class="text-gray-400 max-w-2xl mx-auto">Descubra nossos melhores</p>
         </div>
 
         <!-- Product counter -->
-        <div id="productCounter" class="text-gray-400 text-sm mb-6 sm:mb-8 text-center font-medium animate-fade-in">
+        <div id="productCounter" class="text-gray-400 text-sm mb-8 text-center font-medium animate-fade-in">
           <div class="inline-flex items-center bg-dark-700 px-4 py-2 rounded-full">
             <i class="fas fa-box text-primary-500 mr-2"></i>
             <span>Mostrando <span id="productCount" class="font-semibold text-primary-500">0</span> produtos</span>
@@ -436,20 +355,20 @@
         </div>
 
         <!-- Product grid -->
-        <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           <!-- Products will be inserted here via JavaScript -->
         </div>
 
         <!-- Empty state -->
-        <div id="noProductsMessage" class="hidden text-center py-12 sm:py-16 animate-fade-in">
-          <div class="inline-block p-6 sm:p-8 bg-dark-700 rounded-2xl max-w-md border border-gray-700">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
-              <i class="fas fa-box-open text-xl sm:text-2xl text-white"></i>
+        <div id="noProductsMessage" class="hidden text-center py-16 animate-fade-in">
+          <div class="inline-block p-8 bg-dark-700 rounded-2xl max-w-md border border-gray-700">
+            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+              <i class="fas fa-box-open text-2xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-semibold mb-2">Nenhum produto encontrado</h3>
-            <p class="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">Tente ajustar sua busca ou selecionar outra categoria</p>
+            <h3 class="text-xl font-semibold mb-2">Nenhum produto encontrado</h3>
+            <p class="text-gray-400 mb-6">Tente ajustar sua busca ou selecionar outra categoria</p>
             <button onclick="filterByCategory('all')" 
-                    class="px-5 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 text-sm sm:text-base">
+                    class="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105">
               Ver todos os produtos
             </button>
           </div>
@@ -458,40 +377,40 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-12 sm:py-16 bg-gradient-to-br from-dark-900 to-dark-800 border-t border-b border-gray-800">
+    <section class="py-16 bg-gradient-to-br from-dark-900 to-dark-800 border-t border-b border-gray-800">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-8 sm:mb-12">
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-red-500">
               Por que escolher a LTM?
             </span>
           </h2>
-          <p class="text-gray-400 max-w-3xl mx-auto text-sm sm:text-base">Qualidade superior com atendimento feito sob medida.</p>
+          <p class="text-gray-400 max-w-3xl mx-auto">Qualidade superior com atendimento feito sob medida.</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          <div class="feature-card bg-dark-700 p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mb-4 sm:mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-              <i class="fas fa-award feature-icon text-xl sm:text-2xl text-white"></i>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="feature-card bg-dark-700 p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
+            <div class="w-16 h-16 mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+              <i class="fas fa-award feature-icon text-2xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Excelência em Qualidade</h3>
-            <p class="text-gray-400 text-sm sm:text-base">Trabalhamos com materiais de alta qualidade e tecnologia avançada para entregar produtos de excelência.</p>
+            <h3 class="text-xl font-semibold mb-3">Excelência em Qualidade</h3>
+            <p class="text-gray-400">Trabalhamos com materiais de alta qualidade e tecnologia avançada para entregar produtos de excelência.</p>
           </div>
           
-          <div class="feature-card bg-dark-700 p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mb-4 sm:mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-              <i class="fas fa-truck feature-icon text-xl sm:text-2xl text-white"></i>
+          <div class="feature-card bg-dark-700 p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
+            <div class="w-16 h-16 mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+              <i class="fas fa-truck feature-icon text-2xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Entrega Rápida em Todo o Brasil</h3>
-            <p class="text-gray-400 text-sm sm:text-base">Processos otimizados que garantem agilidade na produção e entrega dentro do prazo combinado.</p>
+            <h3 class="text-xl font-semibold mb-3">Entrega Rápida em Todo o Brasil</h3>
+            <p class="text-gray-400">Processos otimizados que garantem agilidade na produção e entrega dentro do prazo combinado.</p>
           </div>
           
-          <div class="feature-card bg-dark-700 p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mb-4 sm:mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-              <i class="fas fa-headset feature-icon text-xl sm:text-2xl text-white"></i>
+          <div class="feature-card bg-dark-700 p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
+            <div class="w-16 h-16 mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+              <i class="fas fa-headset feature-icon text-2xl text-white"></i>
             </div>
-            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Suporte Especializado</h3>
-            <p class="text-gray-400 text-sm sm:text-base">Equipe especializada para esclarecer dúvidas e apoiar o desenvolvimento do seu projeto.</p>
+            <h3 class="text-xl font-semibold mb-3">Suporte Especializado</h3>
+            <p class="text-gray-400">Equipe especializada para esclarecer dúvidas e apoiar o desenvolvimento do seu projeto.</p>
           </div>
         </div>
       </div>
@@ -503,17 +422,16 @@
     <div class="flex items-center justify-center min-h-screen">
       <div class="relative bg-dark-800 rounded-2xl shadow-2xl w-full max-w-6xl animate-scale-in overflow-hidden border border-gray-700 modal-content">
         <!-- Close button -->
-        <button onclick="closeModal()" class="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-red-500 flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform duration-300"
-                aria-label="Fechar modal">
+        <button onclick="closeModal()" class="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-red-500 flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform duration-300">
           <i class="fas fa-times"></i>
         </button>
         
         <!-- Modal content -->
-        <div class="flex flex-col lg:flex-row modal-body">
+        <div class="flex flex-col lg:flex-row">
           <!-- Image gallery -->
           <div class="relative w-full lg:w-1/2 bg-gray-900">
             <div id="modalImageContainer" class="relative h-64 sm:h-80 lg:h-[500px] overflow-hidden bg-dark-800">
-              <img id="modalImage" src="" alt="" class="w-full h-full object-contain transition-opacity duration-300" loading="lazy">
+              <img id="modalImage" src="" alt="" class="w-full h-full object-contain transition-opacity duration-300">
               <div id="imageLoader" class="absolute inset-0 flex items-center justify-center bg-dark-800/80">
                 <div class="w-14 h-14 border-4 border-dark-700 border-t-primary-500 rounded-full animate-spin"></div>
               </div>
@@ -521,59 +439,57 @@
             
             <!-- Image navigation -->
             <div class="absolute bottom-6 left-0 right-0 flex justify-center space-x-3 z-10">
-              <button onclick="changeImage(-1)" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-dark-700/90 text-white flex items-center justify-center hover:bg-primary-500 transition-all duration-300 shadow-lg"
-                      aria-label="Imagem anterior">
+              <button onclick="changeImage(-1)" class="w-12 h-12 rounded-full bg-dark-700/90 text-white flex items-center justify-center hover:bg-primary-500 transition-all duration-300 shadow-lg">
                 <i class="fas fa-chevron-left"></i>
               </button>
-              <span id="imageCounter" class="px-3 sm:px-4 py-1.5 sm:py-2 bg-dark-700/90 text-white text-xs sm:text-sm rounded-full font-medium">1/3</span>
-              <button onclick="changeImage(1)" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-dark-700/90 text-white flex items-center justify-center hover:bg-primary-500 transition-all duration-300 shadow-lg"
-                      aria-label="Próxima imagem">
+              <span id="imageCounter" class="px-4 py-2 bg-dark-700/90 text-white text-sm rounded-full font-medium">1/3</span>
+              <button onclick="changeImage(1)" class="w-12 h-12 rounded-full bg-dark-700/90 text-white flex items-center justify-center hover:bg-primary-500 transition-all duration-300 shadow-lg">
                 <i class="fas fa-chevron-right"></i>
               </button>
             </div>
             
             <!-- Thumbnails -->
-            <div id="thumbnails" class="flex p-3 sm:p-4 space-x-2 sm:space-x-3 overflow-x-auto scroll-container">
+            <div id="thumbnails" class="flex p-4 space-x-3 overflow-x-auto scroll-container">
               <!-- Thumbnails will be inserted here via JavaScript -->
             </div>
           </div>
                   
           <!-- Product info -->
-          <div class="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8 modal-product-info">
-            <div class="flex justify-between items-start mb-4 sm:mb-6">
-              <h2 id="modalProductName" class="text-xl sm:text-2xl lg:text-3xl font-bold"></h2>
-              <span id="modalProductPrice" class="px-3 sm:px-4 py-1 sm:py-1.5 bg-green-500/20 text-green-400 rounded-full text-xs sm:text-sm font-medium hidden"></span>
+          <div class="w-full lg:w-1/2 p-6 lg:p-8">
+            <div class="flex justify-between items-start mb-6">
+              <h2 id="modalProductName" class="text-2xl lg:text-3xl font-bold"></h2>
+              <span id="modalProductPrice" class="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-medium hidden"></span>
             </div>
             
-            <div class="flex items-center mb-4 sm:mb-6">
-              <span id="modalProductCategory" class="px-2 sm:px-3 py-1 bg-primary-500/20 text-primary-400 rounded-full text-xs font-medium"></span>
-              <span id="modalProductCode" class="ml-2 sm:ml-3 px-2 sm:px-3 py-1 bg-dark-700 text-gray-400 rounded-full text-xs font-medium hidden">REF: 0000</span>
+            <div class="flex items-center mb-6">
+              <span id="modalProductCategory" class="px-3 py-1 bg-primary-500/20 text-primary-400 rounded-full text-xs font-medium"></span>
+              <span id="modalProductCode" class="ml-3 px-3 py-1 bg-dark-700 text-gray-400 rounded-full text-xs font-medium hidden">REF: 0000</span>
             </div>
             
-            <div class="flex items-center mb-3 sm:mb-4">
-              <div class="flex text-yellow-400 text-sm sm:text-base">
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
               </div>
-              <span class="text-gray-400 text-xs sm:text-sm ml-2">(19 avaliações)</span>
+              <span class="text-gray-400 text-sm ml-2">(19 avaliações)</span>
             </div>
             
-            <p id="modalProductDescription" class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base"></p>
+            <p id="modalProductDescription" class="text-gray-300 mb-6"></p>
             
-            <div class="mb-6 sm:mb-8">
-              <h3 class="font-semibold text-base sm:text-lg mb-2 sm:mb-3 flex items-center">
+            <div class="mb-8">
+              <h3 class="font-semibold text-lg mb-3 flex items-center">
                 <i class="fas fa-info-circle text-primary-500 mr-2"></i> Observações
               </h3>
-              <ul id="modalProductDetails" class="text-gray-400 text-xs sm:text-sm space-y-2 sm:space-y-3">
+              <ul id="modalProductDetails" class="text-gray-400 text-sm space-y-3">
                 <!-- Details will be inserted here via JavaScript -->
               </ul>
             </div>
             
-            <div class="flex space-x-3 sm:space-x-4">
-              <a id="whatsappButton" href="#" class="flex-1 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center text-sm sm:text-base">
+            <div class="flex space-x-4">
+              <a id="whatsappButton" href="#" class="flex-1 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center">
                 <i class="fab fa-whatsapp mr-2 text-lg"></i> Solicitar orçamento
               </a>
             </div>
@@ -584,82 +500,80 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark-900 py-8 sm:py-12 border-t border-gray-800">
+  <footer class="bg-dark-900 py-12 border-t border-gray-800">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10 mb-8 sm:mb-10 footer-grid">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
         <div>
-          <div class="flex items-center mb-4 sm:mb-5">
+          <div class="flex items-center mb-5">
             <div class="w-10 h-10 mr-3 bg-gradient-to-br from-primary-500 to-red-500 rounded flex items-center justify-center">
               <svg viewBox="0 0 24 24" class="w-6 h-6 text-white">
                 <path fill="currentColor" d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7L16,11.2V18H15V14H9V18H8V11.2L12,7.7Z" />
               </svg>
             </div>
-            <span class="text-lg sm:text-xl font-bold">LTM | Padronizações</span>
+            <span class="text-xl font-bold">LTM | Padronizações</span>
           </div>
-          <p class="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">Design criativo e soluções visuais personalizadas para o seu negócio.</p>
-          <div class="flex space-x-3 sm:space-x-4">
-            <a href="https://wa.me/5511953154358" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300"
-               aria-label="WhatsApp">
+          <p class="text-gray-400 text-sm mb-6">Design criativo e soluções visuais personalizadas para o seu negócio.</p>
+          <div class="flex space-x-4">
+            <a href="https://wa.me/5511953154358" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://www.instagram.com/ltm_padronizacoes/" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300"
-               aria-label="Instagram">
+            <a href="https://www.instagram.com/ltm_padronizacoes/" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/ltmpadronizacoes" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300"
-               aria-label="Facebook">
+            <a href="https://www.facebook.com/ltmpadronizacoes" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
               <i class="fab fa-facebook-f"></i>
             </a>
           </div>
         </div>
         
         <div>
-          <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-5">• Atalhos Rápidos</h3>
-          <ul class="space-y-2 sm:space-y-3">
-            <li><a href="#" onclick="filterByCategory('acrilicos')" class="text-gray-400 hover:text-primary-500 text-xs sm:text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Acrílicos</a></li>
-            <li><a href="#" onclick="filterByCategory('cvisual')" class="text-gray-400 hover:text-primary-500 text-xs sm:text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Comunicação Visual</a></li>
-            <li><a href="#" onclick="filterByCategory('claser')" class="text-gray-400 hover:text-primary-500 text-xs sm:text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Corte a Laser</a></li>
-            <li><a href="#" onclick="filterByCategory('router')" class="text-gray-400 hover:text-primary-500 text-xs sm:text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Router CNC</a></li>
-            <li><a href="#" onclick="filterByCategory('personalizados')" class="text-gray-400 hover:text-primary-500 text-xs sm:text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Produtos Personalizados</a></li>
+          <h3 class="text-lg font-semibold mb-5">• Atalhos Rápidos</h3>
+          <ul class="space-y-3">
+            <li><a href="#" onclick="filterByCategory('acrilicos')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Acrílicos</a></li>
+            <li><a href="#" onclick="filterByCategory('cvisual')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Comunicação Visual</a></li>
+            <li><a href="#" onclick="filterByCategory('claser')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Corte a Laser</a></li>
+            <li><a href="#" onclick="filterByCategory('router')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Router CNC</a></li>
+            <li><a href="#" onclick="filterByCategory('personalizados')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Produtos Personalizados</a></li>
           </ul>
         </div>
         
+        
         <div>
-          <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-5">• Contato</h3>
-          <ul class="space-y-2 sm:space-y-3 text-gray-400 text-xs sm:text-sm">
-            <li class="flex items-start">
-              <i class="fas fa-map-marker-alt text-primary-500 mr-2 sm:mr-3 mt-0.5"></i> Rua Grã-Bretanha - 360 - Taboão - SBC - SP
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-envelope text-primary-500 mr-2 sm:mr-3 mt-0.5"></i> andre@lotomix.com.br
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-phone-alt text-primary-500 mr-2 sm:mr-3 mt-0.5"></i> (11) 95315-4358 / (11) 2374-3036
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-clock text-primary-500 mr-2 sm:mr-3 mt-0.5"></i> Seg-Sex: 08:00 às 17:48
-            </li>
+          <h3 class="text-lg font-semibold mb-5">• Contato</h3>
+          <ul class="space-y-3 text-gray-400 text-sm">
+<li class="flex items-start">
+    <i class="fas fa-map-marker-alt text-primary-500 mr-3 mt-1"></i> Rua Grã-Bretanha - 360 - Taboão - SBC - SP
+</li>
+<li class="flex items-start">
+    <i class="fas fa-envelope text-primary-500 mr-3 mt-1"></i> andre@lotomix.com.br
+</li>
+<li class="flex items-start">
+    <i class="fas fa-phone-alt text-primary-500 mr-3 mt-1"></i> (11) 95315-4358 / (11) 2374-3036
+</li>
+<li class="flex items-start">
+    <i class="fas fa-clock text-primary-500 mr-3 mt-1"></i> Seg-Sex: 08:00 às 17:48
+</li>
+
           </ul>
         </div>
       </div>
       
-      <div class="pt-6 sm:pt-8 border-t border-gray-800">
+      <div class="pt-8 border-t border-gray-800">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-500 text-xs sm:text-sm text-center md:text-left mb-3 md:mb-0">© 2025 | LTM Padronizações | Todos os direitos reservados.</p>
-          <p class="text-gray-500 text-xs sm:text-sm text-center md:text-left">
-            Desenvolvido por 
-            <a href="https://droplexstudios.shop" target="_blank" class="text-primary-500 hover:underline">
-              <strong>Droplex Studios</strong>
-            </a>
-          </p>
+          <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">© 2025 | LTM Padronizações | Todos os direitos reservados.</p>
+          <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">
+  Desenvolvido por 
+  <a href="https://droplexstudios.shop" target="_blank" class="text-primary-500 hover:underline">
+    <strong>Droplex Studios</strong>
+  </a>
+</p>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="backToTop" class="fixed bottom-6 right-6 z-30 bg-dark-700 text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 shadow-lg hover:bg-primary-500"
-          aria-label="Voltar ao topo">
+  <button id="backToTop" class="fixed bottom-20 right-6 z-30 bg-dark-700 text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 shadow-lg hover:bg-primary-500">
     <i class="fas fa-arrow-up"></i>
   </button>
 
@@ -709,229 +623,268 @@
     // Product data
     const products = [
       {
-        id: 1001,
-        name: "Coletor de tampinha de garrafa pet",
-        description: "Coletor em acrílico ideal para armazenar tampinhas de garrafas PET de forma organizada e sustentável. Uma solução prática para escolas, empresas e projetos de reciclagem que desejam incentivar a coleta seletiva com estilo e durabilidade.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "coletorpet.webp",
-          "coletorpet.png"
-        ],
-        details: [
-          "Fabricado em acrílico resistente de alta durabilidade",
-          "Design transparente que facilita a visualização das tampinhas",
-          "Ideal para campanhas de reciclagem e coleta solidária"
-        ]
-      },
+  id: 1001,
+  name: "Coletor de tampinha de garrafa pet",
+  description: "Coletor em acrílico ideal para armazenar tampinhas de garrafas PET de forma organizada e sustentável. Uma solução prática para escolas, empresas e projetos de reciclagem que desejam incentivar a coleta seletiva com estilo e durabilidade.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "coletorpet.webp",
+    "coletorpet.png"
+  ],
+  details: [
+    "Fabricado em acrílico resistente de alta durabilidade",
+    "Design transparente que facilita a visualização das tampinhas",
+    "Ideal para campanhas de reciclagem e coleta solidária"
+  ]
+},
+
       {
-        id: 1002,
-        name: "Protetor de escada rolante",
-        description: "Protetor em acrílico desenvolvido para garantir maior segurança em escadas rolantes, evitando acidentes e preservando a estrutura. Produto resistente e discreto, ideal para shoppings, empresas e ambientes de grande circulação.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "escadarolante1.png",
-          "escadarolante2.png"
-        ],
-        details: [
-          "Produzido em acrílico cristal de alta resistência",
-          "Instalação simples e segura em diferentes modelos de escada rolante",
-          "Durabilidade e fácil manutenção para uso contínuo"
-        ]
-      },
+  id: 1002,
+  name: "Protetor de escada rolante",
+  description: "Protetor em acrílico desenvolvido para garantir maior segurança em escadas rolantes, evitando acidentes e preservando a estrutura. Produto resistente e discreto, ideal para shoppings, empresas e ambientes de grande circulação.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "escadarolante1.png",
+    "escadarolante2.png"
+  ],
+  details: [
+    "Produzido em acrílico cristal de alta resistência",
+    "Instalação simples e segura em diferentes modelos de escada rolante",
+    "Durabilidade e fácil manutenção para uso contínuo"
+  ]
+},
+
       {
-        id: 1003,
-        name: "Troféu de Lego",
-        description: "Troféu personalizado em formato de peça de Lego, perfeito para premiações criativas, eventos escolares, competições e homenagens especiais. Fabricado em acrílico de alta qualidade, une design divertido com acabamento sofisticado.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "trofeulego1.png",
-          "trofeulego2.png"
-        ],
-        details: [
-          "Produzido em acrílico resistente com corte a laser de alta precisão",
-          "Design lúdico e moderno, com peças de lego de verdade",
-          "Possibilidade de personalização com nomes, logotipos ou frases"
-        ]
-      },
+  id: 1003,
+  name: "Troféu de Lego",
+  description: "Troféu personalizado em formato de peça de Lego, perfeito para premiações criativas, eventos escolares, competições e homenagens especiais. Fabricado em acrílico de alta qualidade, une design divertido com acabamento sofisticado.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "trofeulego1.png",
+    "trofeulego2.png"
+  ],
+  details: [
+    "Produzido em acrílico resistente com corte a laser de alta precisão",
+    "Design lúdico e moderno, com peças de lego de verdade",
+    "Possibilidade de personalização com nomes, logotipos ou frases"
+  ]
+},
+
       {
-        id: 1004,
-        name: "Luminária LED RGB personalizada",
-        description: "Luminária em acrílico com base de LED RGB, perfeita para decoração moderna e creativa. Permite personalização com nomes, logotipos ou desenhos, transformando qualquer ambiente em um espaço único e cheio de estilo.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "luminaria1.png",
-          "luminaria2.png"
-        ],
-        details: [
-          "Iluminação RGB com múltiplas cores e efeitos de luz",
-          "Acrílico de alta qualidade com personalização a laser",
-          "Ideal para decoração de quartos, escritórios e presentes especiais"
-        ]
-      },
+  id: 1004,
+  name: "Luminária LED RGB personalizada",
+  description: "Luminária em acrílico com base de LED RGB, perfeita para decoração moderna e criativa. Permite personalização com nomes, logotipos ou desenhos, transformando qualquer ambiente em um espaço único e cheio de estilo.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "luminaria1.png",
+    "luminaria2.png"
+  ],
+  details: [
+    "Iluminação RGB com múltiplas cores e efeitos de luz",
+    "Acrílico de alta qualidade com personalização a laser",
+    "Ideal para decoração de quartos, escritórios e presentes especiais"
+  ]
+},
+
       {
-        id: 1005,
-        name: "Troféu de comemoração",
-        description: "Troféu em acrílico elegante, ideal para marcar datas especiais, conquistas e homenagens. Com design sofisticado e acabamento de alta qualidade, é perfeito para empresas, escolas e eventos comemorativos.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "70anos1.png",
-          "70anos2.png"
-        ],
-        details: [
-          "Produzido em acrílico cristal resistente com corte a laser",
-          "Design clássico e elegante para qualquer ocasião",
-          "Possibilidade de personalização com nomes, datas e logotipos"
-        ]
-      },
+  id: 1005,
+  name: "Troféu de comemoração",
+  description: "Troféu em acrílico elegante, ideal para marcar datas especiais, conquistas e homenagens. Com design sofisticado e acabamento de alta qualidade, é perfeito para empresas, escolas e eventos comemorativos.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "70anos1.png",
+    "70anos2.png"
+  ],
+  details: [
+    "Produzido em acrílico cristal resistente com corte a laser",
+    "Design clássico e elegante para qualquer ocasião",
+    "Possibilidade de personalização com nomes, datas e logotipos"
+  ]
+},
+
       {
-        id: 1006,
-        name: "Acrílico espelhado",
-        description: "Acrílico espelhado de alta qualidade, ideal para decoração, sinalização e projetos criativos. Leve, resistente e elegante, permite personalização com cortes e gravações a laser, agregando estilo e funcionalidade a qualquer ambiente.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "espelhoduda1.png",
-          "letraduda.png"
-        ],
-        details: [
-          "Acabamento espelhado que proporciona brilho e sofisticação",
-          "Material resistente e durável, fácil de limpar e manter",
-          "Versátil para decoração, artesanato e sinalização personalizada"
-        ]
-      },
+  id: 1006,
+  name: "Acrílico espelhado",
+  description: "Acrílico espelhado de alta qualidade, ideal para decoração, sinalização e projetos criativos. Leve, resistente e elegante, permite personalização com cortes e gravações a laser, agregando estilo e funcionalidade a qualquer ambiente.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "espelhoduda1.png",
+    "letraduda.png"
+  ],
+  details: [
+    "Acabamento espelhado que proporciona brilho e sofisticação",
+    "Material resistente e durável, fácil de limpar e manter",
+    "Versátil para decoração, artesanato e sinalização personalizada"
+  ]
+},
+
       {
-        id: 1007,
-        name: "Urna transparente",
-        description: "Urna em acrílico cristal transparente, perfeita para sorteios, votações e coletas de formulários. Resistente e elegante, oferece visibilidade total do conteúdo e permite personalização com gravações a laser, garantindo praticidade e estilo.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "urna1.png",
-          "urna2.png"
-        ],
-        details: [
-          "Fabricada em acrílico cristal resistente e durável",
-          "Transparência total para melhor visualização do conteúdo",
-          "Ideal para sorteios, votações, eventos e campanhas"
-        ]
-      },
+  id: 1007,
+  name: "Urna transparente",
+  description: "Urna em acrílico cristal transparente, perfeita para sorteios, votações e coletas de formulários. Resistente e elegante, oferece visibilidade total do conteúdo e permite personalização com gravações a laser, garantindo praticidade e estilo.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "urna1.png",
+    "urna2.png"
+  ],
+  details: [
+    "Fabricada em acrílico cristal resistente e durável",
+    "Transparência total para melhor visualização do conteúdo",
+    "Ideal para sorteios, votações, eventos e campanhas"
+  ]
+},
+
       {
-        id: 1008,
-        name: "Coletor de lacre de latinhas",
-        description: "Coletor em acrílico resistente, ideal para armazenar lacres de latinhas de forma organizada e incentivar práticas de reciclagem. Perfeito para escolas, empresas e projetos sociais, alia funcionalidade com consciência ambiental.",
-        category: "acrilicos",
-        price: "",
-        images: [
-          "lacre1.png",
-          "lacre2.png"
-        ],
-        details: [
-          "Fabricado em acrílico cristal de alta durabilidade",
-          "Design transparente que facilita a visualização dos lacres",
-          "Ideal para campanhas de reciclagem e projetos sustentáveis"
-        ]
-      },
-      {
-        id: 1009,
-        name: "Acabamento de painel publicitário",
-        description: "Acabamento em alumínio de alta qualidade, ideal para valorizar e proteger painéis publicitários. Combina resistência e leveza com design elegante, oferecendo um acabamento profissional que destaca sua comunicação visual.",
-        category: "cvisual",
-        price: "",
-        images: [
-          "painel1.png",
-          "painel2.png"
-        ],
-        details: [
-          "Fabricado em alumínio resistente e durável",
-          "Proporciona acabamento sofisticado para painéis publicitários",
-          "Leve e fácil de instalar, garantindo proteção e estética"
-        ]
-      },
-      {
-        id: 1010,
-        name: "Veículos envelopados",
-        description: "Serviço de envelopamento automotivo para personalização e proteção de veículos. Ideal para empresas que desejam reforçar sua identidade visual ou para quem busca dar um novo estilo ao carro, unindo estética, resistência e durabilidade.",
-        category: "cvisual",
-        price: "",
-        images: [
-          "vanhertz.png",
-          "kombipreta.png"
-        ],
-        details: [
-          "Envelopamento em vinil de alta qualidade e durabilidade",
-          "Protege a pintura original contra riscos e intempéries",
-          "Opções de personalização com cores, texturas e identidade visual"
-        ]
-      },
-      {
-        id: 1011,
-        name: "Escritório personalizado",
-        description: "Projetos de personalização de escritórios que unem funcionalidade e identidade visual. Transforme o ambiente de trabalho em um espaço moderno, organizado e com a cara da sua marca, passando profissionalismo e credibilidade.",
-        category: "cvisual",
-        price: "",
-        images: [
-          "escritoriohertz2.png",
-          "escritoriohertz1.png"
-        ],
-        details: [
-          "Layout planejado para destacar a identidade da marca",
-          "Uso de materiais de alta qualidade e acabamento profissional",
-          "Soluções personalizadas para ambientes corporativos modernos"
-        ]
-      },
-      {
-        id: 1012,
-        name: "Geladeiras envelopadas",
-        description: "Serviço de envelopamento de geladeiras com vinil de alta qualidade, ideal para personalização em pontos de venda, bares, restaurantes e eventos. Une impacto visual com proteção da superfície, reforçando a identidade da marca.",
-        category: "cvisual",
-        price: "",
-        images: [
-          "geladeira1.png",
-          "geladeira2.png"
-        ],
-        details: [
-          "Envelopamento em vinil resistente e durável",
-          "Protege a superfície da geladeira contra riscos e desgaste",
-          "Personalização completa com cores, estampas e logotipos"
-        ]
-      },
-      {
-        id: 1013,
-        name: "Paredes personalizadas",
-        description: "Transforme ambientes com paredes personalizadas que refletem a identidade da sua marca. Ideal para empresas, escritórios, lojas e residências que desejam unir design moderno, estilo e exclusividade em cada detalhe.",
-        category: "cvisual",
-        price: "",
-        images: [
-          "parede1.png",
-          "parede2.png"
-        ],
-        details: [
-          "Revestimento personalizado com cores, estampas e logotipos",
-          "Materiais de alta durabilidade e acabamento profissional",
-          "Soluções exclusivas para ambientes corporativos e residenciais"
-        ]
-      },
-      {
-        id: 1014,
-        name: "Letra 3D personalizada",
-        description: "Letras 3D feitas sob medida para destacar sua marca ou decoração, com acabamento profissional e alta resistência.",
-        category: "cvisual",
-        price: "",
-        images: [
-          "letranatal.png",
-          "letragolden.png"
-        ],
-        details: [
-          "Produzido em material de alta qualidade",
-          "Disponível em diversas cores e tamanhos",
-          "Perfeito para fachadas, eventos e decorações personalizadas"
-        ]
-      }
+  id: 1008,
+  name: "Coletor de lacre de latinhas",
+  description: "Coletor em acrílico resistente, ideal para armazenar lacres de latinhas de forma organizada e incentivar práticas de reciclagem. Perfeito para escolas, empresas e projetos sociais, alia funcionalidade com consciência ambiental.",
+  category: "acrilicos",
+  price: "",
+  images: [
+    "lacre1.png",
+    "lacre2.png"
+  ],
+  details: [
+    "Fabricado em acrílico cristal de alta durabilidade",
+    "Design transparente que facilita a visualização dos lacres",
+    "Ideal para campanhas de reciclagem e projetos sustentáveis"
+  ]
+},
+{
+  id: 1009,
+  name: "Acabamento de painel publicitário",
+  description: "Acabamento em alumínio de alta qualidade, ideal para valorizar e proteger painéis publicitários. Combina resistência e leveza com design elegante, oferecendo um acabamento profissional que destaca sua comunicação visual.",
+  category: "cvisual",
+  price: "",
+  images: [
+    "painel1.png",
+    "painel2.png"
+  ],
+  details: [
+    "Fabricado em alumínio resistente e durável",
+    "Proporciona acabamento sofisticado para painéis publicitários",
+    "Leve e fácil de instalar, garantindo proteção e estética"
+  ]
+},
+{
+  id: 1010,
+  name: "Veículos envelopados",
+  description: "Serviço de envelopamento automotivo para personalização e proteção de veículos. Ideal para empresas que desejam reforçar sua identidade visual ou para quem busca dar um novo estilo ao carro, unindo estética, resistência e durabilidade.",
+  category: "cvisual",
+  price: "",
+  images: [
+    "vanhertz.png",
+    "kombipreta.png"
+  ],
+  details: [
+    "Envelopamento em vinil de alta qualidade e durabilidade",
+    "Protege a pintura original contra riscos e intempéries",
+    "Opções de personalização com cores, texturas e identidade visual"
+  ]
+},
+{
+  id: 1011,
+  name: "Escritório personalizado",
+  description: "Projetos de personalização de escritórios que unem funcionalidade e identidade visual. Transforme o ambiente de trabalho em um espaço moderno, organizado e com a cara da sua marca, passando profissionalismo e credibilidade.",
+  category: "cvisual",
+  price: "",
+  images: [
+    "escritoriohertz2.png",
+    "escritoriohertz1.png"
+  ],
+  details: [
+    "Layout planejado para destacar a identidade da marca",
+    "Uso de materiais de alta qualidade e acabamento profissional",
+    "Soluções personalizadas para ambientes corporativos modernos"
+  ]
+},
+{
+  id: 1012,
+  name: "Geladeiras envelopadas",
+  description: "Serviço de envelopamento de geladeiras com vinil de alta qualidade, ideal para personalização em pontos de venda, bares, restaurantes e eventos. Une impacto visual com proteção da superfície, reforçando a identidade da marca.",
+  category: "cvisual",
+  price: "",
+  images: [
+    "geladeira1.png",
+    "geladeira2.png"
+  ],
+  details: [
+    "Envelopamento em vinil resistente e durável",
+    "Protege a superfície da geladeira contra riscos e desgaste",
+    "Personalização completa com cores, estampas e logotipos"
+  ]
+},
+{
+  id: 1013,
+  name: "Paredes personalizadas",
+  description: "Transforme ambientes com paredes personalizadas que refletem a identidade da sua marca. Ideal para empresas, escritórios, lojas e residências que desejam unir design moderno, estilo e exclusividade em cada detalhe.",
+  category: "cvisual",
+  price: "",
+  images: [
+    "parede1.png",
+    "parede2.png"
+  ],
+  details: [
+    "Revestimento personalizado com cores, estampas e logotipos",
+    "Materiais de alta durabilidade e acabamento profissional",
+    "Soluções exclusivas para ambientes corporativos e residenciais"
+  ]
+},
+{
+  id: 1014,
+  name: "Letra 3D personalizada",
+  description: "Letras 3D feitas sob medida para destacar sua marca ou decoração, com acabamento profissional e alta resistência.",
+  category: "marcenaria",
+  price: "",
+  images: [
+    "letranatal.png",
+    "letragolden.png"
+  ],
+  details: [
+    "Produzido em material de alta qualidade",
+    "Disponível em diversas cores e tamanhos",
+    "Perfeito para eventos e decorações personalizadas"
+  ]
+},
+{
+  id: 1015,
+  name: "Armário personalizado",
+  description: "Armário planejado sob medida para atender suas necessidades de organização, unindo funcionalidade e estilo.",
+  category: "marcenaria",
+  price: "",
+  images: [
+    "armario1.png",
+    "armario2.png"
+  ],
+  details: [
+    "Design 100% personalizado de acordo com o espaço do cliente",
+    "Disponível em diversas cores, texturas e padrões de madeira",
+    "Ideal para quartos, escritórios e ambientes corporativos"
+  ]
+},
+{
+  id: 1016,
+  name: "Quiosque sustentável",
+  description: "",
+  category: "marcenaria",
+  price: "",
+  images: [
+    "quiosque1.png",
+    "quiosque2.png"
+  ],
+  details: [
+    "Fabricado em acrílico cristal de alta durabilidade",
+    "Design transparente que facilita a visualização dos lacres",
+    "Ideal para campanhas de reciclagem e projetos sustentáveis"
+  ]
+}
     ];
 
     // Global variables
@@ -976,10 +929,10 @@
       
       filteredProducts.forEach((product, index) => {
         const productCard = document.createElement('div');
-        productCard.className = 'product-card bg-dark-700 rounded-xl overflow-hidden border border-gray-700 transition-all duration-300 animate-fade-in will-change-transform';
+        productCard.className = 'product-card bg-dark-700 rounded-xl overflow-hidden border border-gray-700 transition-all duration-300 animate-fade-in';
         productCard.innerHTML = `
-          <div class="relative overflow-hidden h-48 sm:h-60 product-image-container">
-            <img src="${product.images[0]}" alt="${product.name}" class="product-image w-full h-full object-cover" loading="lazy">
+          <div class="relative overflow-hidden h-60 product-image-container">
+            <img src="${product.images[0]}" alt="${product.name}" class="product-image w-full h-full object-cover">
             <div class="product-overlay absolute inset-0 flex items-end p-4 opacity-0">
               <span class="px-4 py-1.5 badge-gradient text-white text-xs font-semibold rounded-full">
                 ${product.price}
@@ -989,10 +942,10 @@
               ${getCategoryName(product.category)}
             </span>
           </div>
-          <div class="p-4 sm:p-6">
-            <h3 class="font-semibold text-base sm:text-lg mb-2 line-clamp-1">${product.name}</h3>
-            <p class="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-5 line-clamp-2">${product.description}</p>
-            <button onclick="openModal(${index})" class="w-full py-2.5 sm:py-3 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2 line-clamp-1">${product.name}</h3>
+            <p class="text-gray-400 text-sm mb-5 line-clamp-2">${product.description}</p>
+            <button onclick="openModal(${index})" class="w-full py-3 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
               Ver detalhes
             </button>
           </div>
@@ -1106,7 +1059,7 @@
       product.details.forEach(detail => {
         const li = document.createElement('li');
         li.className = 'flex items-start';
-        li.innerHTML = `<i class="fas fa-check text-primary-500 mr-2 sm:mr-3 mt-0.5"></i> <span>${detail}</span>`;
+        li.innerHTML = `<i class="fas fa-check text-primary-500 mr-3 mt-0.5"></i> <span>${detail}</span>`;
         detailsList.appendChild(li);
       });
       
@@ -1133,8 +1086,8 @@
       thumbnailsContainer.innerHTML = '';
       product.images.forEach((img, imgIndex) => {
         const thumbnail = document.createElement('div');
-        thumbnail.className = `flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-lg cursor-pointer overflow-hidden border-2 ${imgIndex === 0 ? 'border-primary-500' : 'border-gray-700'} transition-all duration-300 thumbnail`;
-        thumbnail.innerHTML = `<img src="${img}" alt="Thumbnail ${imgIndex + 1}" class="w-full h-full object-cover transition-opacity" onclick="setImage(${imgIndex})" loading="lazy">`;
+        thumbnail.className = `flex-shrink-0 w-16 h-16 rounded-lg cursor-pointer overflow-hidden border-2 ${imgIndex === 0 ? 'border-primary-500' : 'border-gray-700'} transition-all duration-300 thumbnail`;
+        thumbnail.innerHTML = `<img src="${img}" alt="Thumbnail ${imgIndex + 1}" class="w-full h-full object-cover transition-opacity" onclick="setImage(${imgIndex})">`;
         thumbnailsContainer.appendChild(thumbnail);
       });
       
@@ -1240,33 +1193,3 @@
   </script>
 </body>
 </html>
-
-
-Principais melhorias implementadas:
-
-1. **Otimização para dispositivos móveis**:
-   - Redução de tamanhos de fonte e elementos em telas pequenas
-   - Ajuste de espaçamentos e paddings para melhor aproveitamento do espaço
-   - Melhor organização dos elementos em coluna única em telas pequenas
-
-2. **Melhorias de desempenho**:
-   - Adição de `loading="lazy"` para imagens
-   - Uso de `will-change` para animações mais suaves
-   - Redução do tamanho de imagens em dispositivos móveis
-
-3. **Acessibilidade**:
-   - Adição de rótulos ARIA para elementos interativos
-   - Melhor contraste de cores
-   - Tamanhos de toque adequados para elementos interativos
-
-4. **Experiência do usuário**:
-   - Categorias agora são roláveis horizontalmente em mobile
-   - Botões maiores e mais fáceis de tocar em dispositivos móveis
-   - Modal totalmente responsivo com melhor organização do conteúdo
-
-5. **Design consistente**:
-   - Manutenção da identidade visual em todas as resoluções
-   - Transições suaves entre breakpoints
-   - Espaçamentos proporcionais em todas as telas
-
-O catálogo agora oferece uma experiência otimizada tanto em dispositivos móveis quanto em desktop, mantendo todas as funcionalidades e o visual moderno do design original.
